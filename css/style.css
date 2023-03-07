@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+#container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: center;
+  width: 450px;
+  height: 502px;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(240deg, #f511b1, #001aff);
+}
+
+h1 {
+  width: 100vw;
+  margin: 1.5em 1.5em;
+  color: white;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 75%;
+  height: 180px;
+}
+
+.one {
+  width: 100%;
+}
+
+.one form,
+.two form {
+  width: inherit;
+}
+
+.two form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.one form input,
+.two form input {
+  width: inherit;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 0.5em;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-size: 1em;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.one form input:invalid,
+.two form input:invalid {
+  border-bottom-color: red;
+}
+
+.two {
+  width: 100%;
+}
+
+.link {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.link button {
+  padding: 0.8em 3em;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.2s linear;
+}
+
+.link button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.txt-link {
+  width: inherit;
+}
+
+.txt-link a {
+  color: white;
+  text-decoration: none;
+}
+
+/* responsive */
+
+/* laptop default */
+
+/* tablet */
+
+@media only screen and (max-width: 758px) {
+  html {
+    font-size: 95%;
+  }
+  .fields,
+  .link {
+    width: 80%;
+  }
+  #container {
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+/* handphone */
+
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 90%;
+  }
+  .fields,
+  .link {
+    width: 85%;
+  }
+}
